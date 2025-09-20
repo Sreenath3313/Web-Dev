@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .form-container {
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 8px 10px rgb(255, 0, 0);
+        width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 15px;
+    }
+
+    .form-container h2 {
+      grid-column: span 2;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+      align-self: center;
+    }
+
+    input, select, textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    .gender, .hobbies {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .form-container button {
+      grid-column: span 2;
+      padding: 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .form-container button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container">
+    <h2>Student Registration Form</h2>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label>Gender:</label>
+    <div class="gender">
+      <input type="radio" id="male" name="gender" value="Male" required><label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
+    </div>
+
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Contact No.:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="course">Course:</label>
+    <select id="course" name="course">
+      <option>B.Tech</option>
+      <option>B.Sc</option>
+      <option>B.Com</option>
+      <option>MBA</option>
+    </select>
+
+    <label for="hobbies">Hobbies:</label>
+    <div class="hobbies">
+      <input type="checkbox" id="sports" name="hobbies" value="Sports"><label for="sports">Sports</label>
+      <input type="checkbox" id="music" name="hobbies" value="Music"><label for="music">Music</label>
+      <input type="checkbox" id="reading" name="hobbies" value="Reading"><label for="reading">Reading</label>
+    </div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="cpassword">Confirm Password:</label>
+    <input type="password" id="cpassword" name="cpassword" required>
+
+    <button type="submit">Register</button>
+  </form>
+
+</body>
+</html>

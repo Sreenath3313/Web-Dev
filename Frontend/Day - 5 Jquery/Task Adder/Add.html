@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task adder</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Style7.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; 
+            margin: 0;
+            padding: 20px;
+            background: #e9ecef;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #myInput {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #add {
+            padding: 8px 15px;
+            margin-left: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #add:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        ul li {
+            background: #f0f0f0;
+            margin: 5px auto;
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .complete-btn {
+            background-color: #28a745; /* green before click */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .complete-btn:hover {
+            opacity: 0.9;
+        }
+
+        .completed {
+            background: #fff3cd !important; /* yellow background */
+        }
+
+        .completed .complete-btn {
+            background-color: #dc3545; /* red after click */
+        }
+
+        .task-text {
+            flex: 1;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TO DO LIST</h1>
+        <input type="text" id="myInput" placeholder="Enter a task">
+        <button id="add">Add Task</button>
+        <ul id="list"></ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            let count = 0; // serial number counter
+
+            $("#add").click(function(){
+                let task = $("#myInput").val();
+                if(task !== ""){
+                    count++;
+                    $("#list").append(
+                        "<li><span class='task-text'>" + count + ". " + task + 
+                        "</span><button class='complete-btn'>Complete</button></li>"
+                    );
+                    $("#myInput").val("");
+                }
+            });
+
+            // Toggle completion
+            $(document).on("click", ".complete-btn", function(){
+                $(this).parent().toggleClass("completed");
+            });
+        });
+    </script>
+</body>
+</html>

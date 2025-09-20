@@ -1,0 +1,169 @@
+<html>  
+<head>
+<title>Portfolio & Bio Data</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #5303f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15Ipx rgb(238, 0, 0);
+}
+.summary {
+    margin-bottom: 32px ;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+}
+.summary h2 {
+    margin-top: 0;
+    color: rgb(0, 105, 196);
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+}
+.card {
+    background: #ecf801;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 200px;
+    min-width: 200px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card h3 {
+    margin-top: 0;
+    color: #2301ff;
+}
+.card p {
+    margin-bottom: 0;
+    color: #333;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+.student-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.student-section img {
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.student-section h1 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+.student-section ol {
+    text-align: left;
+    display: inline-block;
+    color: #222;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media (min-width: 600px) {
+    .cards {
+        flex-direction: row;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Student Bio Section -->
+        <div class="student-section">
+            <h1>Student Image</h1>
+            <img src="../Resc/Student.jpg" alt="Profile Picture" width="200">
+            <h1>Student Details</h1>
+            <ol>
+                <li>Name: Sree</li>
+                <li>Age: 20</li>
+                <li>Gender: Male</li>
+                <li>Phone: 8019405455</li>
+                <li>Email: nathsri2314@gmail.com</li>
+            </ol>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="summary">
+            <h2>Professional Projects</h2>
+            <p>
+                A showcase of my professional projects demonstrating my skills in web development, data analysis, and software engineering.
+            </p>
+        </div>
+        <div>
+            <h2 style="color:rgb(255, 6, 6);">Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Project Management Dashboard</h3>
+                    <p>
+                        Developed a comprehensive dashboard for tracking project progress, timelines, and team collaboration using React and Node.js.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        Designed and deployed a personal portfolio website showcasing skills, experience, and projects, optimized for SEO and mobile devices.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="../Resc/tool.jpg" alt="Team Tool">
+                    <h3>Team Collaboration Tool</h3>
+                    <p>
+                        Built a tool that integrates chat, file sharing, and task assignments to improve remote team collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div style="margin-top:40px;">
+            <h2 style="color:white;">Education</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Bachelor of Computer Science (AI&ML)</h3>
+                    <p>SRIT, 2024 – 2027</p>
+                </div>
+                <div class="card">
+                    <h3>High School</h3>
+                    <p>Vikas School, Graduated 2020</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div style="margin-top:40px;">
+            <h2 style="color:white;">Certifications</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Full Stack Web Development</h3>
+                    <p>Certified by Coursera, 2023</p>
+                </div>
+                <div class="card">
+                    <h3>Data Analysis with Python</h3>
+                    <p>Certified by IBM, 2022</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

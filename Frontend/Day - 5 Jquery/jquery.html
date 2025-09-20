@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My jQuery Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Hello, jQuery!</h1>
+    <h3>Welcome to jQuery</h3>
+    <button id="myButton">Click Me</button>
+    <div class="temp">
+        <p> 
+            this is a different function we are using jquery
+        </p>
+    </div>
+     <input type="text" id="myInput">
+<p id="output">Hi this text</p>
+<ul id="list">
+  <li>Item 1</li>
+</ul>
+<button id="add">Add Item</button>
+<button id="addf">Add Ite first</button>
+<button id="remove">Remove Last</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#myButton").click(function(){
+                $("#myDiv").text("Button Clicked!");
+                $("h1").text("Button Clicked!");
+                $("h3").text("Time pass");
+                $(".temp").css("background-color", "yellow");
+                $("p").css("font-weight", "bold");
+            });
+            $("#myButton").dblclick(function(){
+                $("#myDiv").text("Two Button Clicked!");
+                $("h1").text(" Duplicate Button Clicked!");
+                $("h3").text("Time pass");
+                $(".temp").css("background-color", "Red");
+                $("p").css("font-weight", "calibri");
+            });
+             $("#myButton").hover(function(){
+                $("#myDiv").text("Hovered Button Clicked!");
+                $("h1").text(" Duplicate HOVER Button Clicked!");
+                $("h3").text("Time pass");
+                $(".temp").css("background-color", "Blue");
+                $("p").css("font-weight", "italic");
+            });
+               $("#add").click(function(){
+      $("#list").append("<li>New Item appended from script</li>");
+    });
+    $("#addf").click(function(){
+      $("#list").prepend("<li>New Item prepended from script</li>");
+    });
+    $("#remove").click(function(){
+      $("#list li:first").remove();
+    });
+            $("#myInput").keydown(function(){
+                let val = $("#myInput").val();
+                $("#output").text(val);
+            });
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task adder</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        #myInput {
+            padding: 10px;
+            width: 260px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #myInput:focus {
+            border-color: #74ebd5;
+        }
+
+        #add {
+            padding: 10px 15px;
+            margin-left: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #add:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        ul li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        /* only strike-through the text */
+        ul li.completed .task-text {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        ul li.completed {
+            background: #fff3cd; /* yellow background */
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .complete-btn {
+            background-color: #28a745; /* green before click */
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .complete-btn:hover {
+            opacity: 0.9;
+        }
+
+        .completed .complete-btn {
+            background-color: #dc3545; /* red after click */
+        }
+
+        .remove-btn {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .remove-btn:hover {
+            background-color: #e84118;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TO DO LIST</h1>
+        <input type="text" id="myInput" placeholder="Enter a task">
+        <button id="add">Add Task</button>
+
+        <h2>These are your tasks to complete:</h2>
+        <ul id="list"></ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            let count = 0; // serial number counter
+
+            $("#add").click(function(){
+                let task = $("#myInput").val();
+                if(task !== ""){
+                    count++;
+                    $("#list").append(
+                        "<li><span class='task-text'>" + count + ". " + task + 
+                        "</span><div class='btn-group'>" +
+                        "<button class='complete-btn'>Complete</button>" +
+                        "<button class='remove-btn'>Remove</button>" +
+                        "</div></li>"
+                    );
+                    $("#myInput").val("");
+                }
+            });
+
+            // Toggle completion
+            $(document).on("click", ".complete-btn", function(){
+                $(this).closest("li").toggleClass("completed");
+            });
+
+            // Remove task
+            $(document).on("click", ".remove-btn", function(){
+                $(this).closest("li").remove();
+            });
+        });
+    </script>
+</body>
+</html>

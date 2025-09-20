@@ -1,0 +1,205 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+       .container {
+  background: white;
+  width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  margin: 30px auto;   /* adds space around each box */
+}
+
+
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        #myInput {
+            padding: 10px;
+            width: 260px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #myInput:focus {
+            border-color: #74ebd5;
+        }
+
+        #add {
+            padding: 10px 15px;
+            margin-left: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #add:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        ul li {
+            background: #000000;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        /* only strike-through the text */
+        ul li.completed .task-text {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        ul li.completed {
+            background: #fff3cd; /* yellow background */
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .complete-btn {
+            background-color: #28a745; /* green before click */
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .complete-btn:hover {
+            opacity: 0.9;
+        }
+
+        .completed .complete-btn {
+            background-color: #dc3545; /* red after click */
+        }
+
+        .remove-btn {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .remove-btn:hover {
+            background-color: #e84118;
+        }
+        .container input[type="number"] {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: 180px;
+}
+
+.container input[type="number"]:focus {
+  border-color: #74ebd5;
+}
+
+.container .btn-group button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .btn-group button:hover {
+  background-color: #0056b3;
+}
+.vite-text {
+  color: yellow;
+  font-weight: bold;
+  text-shadow: 0 0 10px yellow, 0 0 15px gold, 0 0 20px orange;
+}
+.vite-text:hover {
+  text-shadow: 0 0 10px yellow, 0 0 20px gold, 0 0 40px orange, 0 0 60px gold;
+}
+
+.react-text {
+  color: red;
+  font-weight: bold;
+  text-shadow: 0 0 10px red, 0 0 15px crimson, 0 0 20px darkred;
+}
+.react-text:hover {
+  text-shadow: 0 0 10px red, 0 0 20px crimson, 0 0 40px darkred, 0 0 60px crimson;
+}
+

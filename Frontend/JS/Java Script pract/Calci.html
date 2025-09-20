@@ -1,0 +1,32 @@
+<html>  
+<head>  
+    <title>Calculator</title>   
+</head>
+<body>
+    <script>
+        let a = prompt("Enter first number: ");
+        let b = prompt("Enter second number: ");
+
+        if (a == null || b == null || a === "" || b === "") {
+            document.write("Invalid input");
+        } else {
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            function Calculator(a, b) {
+                let add = a + b;
+                let sub = a - b;
+                let mul = a * b;
+                let div = b !== 0 ? a / b : "Infinity (division by zero)";
+
+                document.write("Addition: " + add + "<br>");    
+                document.write("Subtraction: " + sub + "<br>");
+                document.write("Multiplication: " + mul + "<br>");  
+                document.write("Division: " + div + "<br>");      
+            }
+
+            Calculator(a, b);
+        }
+    </script>
+</body>
+</html>

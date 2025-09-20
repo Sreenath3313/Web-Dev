@@ -1,0 +1,147 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f6fc;
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  color: #222c38;
+}
+
+.app-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 34px rgba(44,78,139,.10);
+  max-width: 480px;
+  width: 96vw;
+  margin: auto;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #2266ee;
+  margin-bottom: 18px;
+  letter-spacing: 0.7px;
+}
+
+.add-student-heading,
+.student-list-heading {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  color: #1676dd;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  width: 92%;
+  max-width: 300px;
+  padding: 12px;
+  border: 1.5px solid #dde2e6;
+  border-radius: 7px;
+  background: #f7fafd;
+  font-size: 15.5px;
+  outline: none;
+  transition: border .2s;
+}
+
+input[type="text"]:focus {
+  border-color: #2266ee;
+  background: #f0f7ff;
+}
+
+button {
+  width: 95%;
+  max-width: 300px;
+  padding: 11px 0;
+  background: linear-gradient(90deg, #2266ee 0%, #389fff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: background .26s;
+  box-shadow: 0 1px 8px rgba(44,78,139,0.10);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #155ad6 0%, #2275dd 100%);
+}
+
+.student-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.student-card {
+  background: #f2f5fb;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(44,78,139,0.06);
+  border: 1.5px solid #dde2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  width: 92%;
+  max-width: 320px;
+  transition: box-shadow .2s;
+}
+
+.student-card:hover {
+  background: #e9f3fc;
+  box-shadow: 0 3px 24px rgba(44,78,139,0.12);
+}
+
+.student-card input[type="text"] {
+  padding: 7px;
+  width: 90px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+.student-card button {
+  width: auto;
+  padding: 7px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+@media (max-width: 530px) {
+  .app-container {
+    padding: 12px 2vw;
+    max-width: 99vw;
+  }
+  input[type="text"], button, .student-card {
+    max-width: 99vw;
+    width: 98vw;
+  }
+  .student-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px 4px;
+  }
+}

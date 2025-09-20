@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreenath | Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6c5ce7;   /* purple */
+      --accent: #ff7675;    /* coral red */
+      --bg: #0d1117;        /* dark background */
+      --card-bg: #161b22;   /* card background */
+      --text: #eaeaea;      /* light text */
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;>
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      margin-top: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 1.2rem 3rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 3rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary);
+    }
+
+    /* About */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 5rem;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 5rem;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      padding: 1.2rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .skill-card i {
+      font-size: 1.3rem;
+    }
+
+    .skill-card:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-6px);
+    }
+
+    /* Projects */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      align-items: center;
+      transition: transform 0.3s;
+    }
+
+    .project-card:nth-child(even) {
+      direction: rtl;
+    }
+
+    .project-card:nth-child(even) .project-content {
+      direction: ltr;
+      text-align: left;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 2rem;
+    }
+
+    .project-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .project-desc {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .project-links .demo {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .project-links .demo:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .project-links .code {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    .project-links .code:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    /* Contact */
+    .contact-form {
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      max-width: 700px;
+      margin: 0 auto 5rem auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 10px;
+      border: none;
+      background: #2c2c2c;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.05rem;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #aaa;
+    }
+
+    .contact-form button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    footer {
+      background: var(--card-bg);
+      color: #888;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about,
+      .project-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .project-card:nth-child(even) {
+        direction: ltr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sreenath</h1>
+    <p>Full Stack Developer | Creative Problem Solver | Tech Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#projects" class="cta-btn">View My Work</a>
+  </header>
+
+  <div class="container">
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="about-img">
+        <img src="../Resc/Tharun.jpg" alt="Sreenath">
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <h3>Who I Am</h3>
+        <p>
+          Hi, I'm <b>Sreenath</b>. I specialize in crafting scalable, user-friendly applications and delivering modern web solutions. With strong skills in full-stack development, UI/UX, and cloud deployment, I enjoy creating impactful digital products that solve real-world challenges.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <div class="skill-card"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+        <div class="skill-card"><i class="fab fa-js"></i> JavaScript / TypeScript</div>
+        <div class="skill-card"><i class="fab fa-react"></i> React & Next.js</div>
+        <div class="skill-card"><i class="fab fa-node"></i> Node.js & Express</div>
+        <div class="skill-card"><i class="fas fa-database"></i> MongoDB & SQL</div>
+        <div class="skill-card"><i class="fas fa-plug"></i> REST & GraphQL</div>
+        <div class="skill-card"><i class="fab fa-git-alt"></i> Git & DevOps</div>
+        <div class="skill-card"><i class="fas fa-paint-brush"></i> UI/UX Design</div>
+        <div class="skill-card"><i class="fas fa-cloud"></i> Cloud Deployment</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img class="project-img" src="../Resc/E-Commerce-Branding-Logo-Multiorders.png" alt="Project 1">
+          <div class="project-content">
+            <div class="project-title">E-Commerce Platform</div>
+            <div class="project-desc">A modern online store with secure payment integration, real-time inventory tracking, and admin dashboards.</div>
+            <div class="project-links">
+              <a href="#" class="demo">Live Demo</a>
+              <a href="#" class="code">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="project-img" src="../Resc/PF.png" alt="Project 2">
+          <div class="project-content">
+            <div class="project-title">Portfolio Website</div>
+            <div class="project-desc">Responsive personal portfolio using React, optimized for SEO, accessibility, and performance.</div>
+            <div class="project-links">
+              <a href="#" class="demo">Live Demo</a>
+              <a href="#" class="code">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="project-img" src="../Resc/Task.png" alt="Project 3">
+          <div class="project-content">
+            <div class="project-title">Task Manager App</div>
+            <div class="project-desc">Productivity app with MERN stack, JWT authentication, and drag-and-drop task management.</div>
+            <div class="project-links">
+              <a href="#" class="demo">Live Demo</a>
+              <a href="#" class="code">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Sreenath. Crafted with passion.
+  </footer>
+</body>
+</html>
