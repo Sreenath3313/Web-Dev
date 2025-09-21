@@ -4,7 +4,7 @@ import StudentForm from "./StudentForm";
 import StudentList from "./StudentList";
 import './assets/css/style.css'; 
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = https://student-production-9788.up.railway.app/students;
 
 function App() {
   const [students, setStudents] = useState([]);
