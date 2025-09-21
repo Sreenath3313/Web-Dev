@@ -4,7 +4,7 @@ import StudentForm from "./StudentForm";
 import StudentList from "./StudentList";
 import './assets/css/style.css'; 
 
-const API_URL = "https://freact-k2fr.vercel.app/students";
+const API_URL = "https://student-production-f8fd.up.railway.app/students";
 
 function App() {
   const [students, setStudents] = useState([]);
